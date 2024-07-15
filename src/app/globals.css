@@ -8,11 +8,11 @@
   box-sizing: border-box;
 }
 
-.home-wrap{
+/* .home-wrap{
   background-image: url("/assets/images/Home_bg.png");
   background-position: center;
   background-size: cover;
-}
+} */
 
 .font-1{
   font-family: "Space Grotesk";
@@ -20,4 +20,10 @@
 
 .font-2{
   font-family: "Poppins";
+}
+
+.progress-fill{
+  background: linear-gradient(to left, #ff9c00 0%, #ff9c00 84%, #ff463d 100%);
+  border: 1px solid white;
+  border-radius: 50px;
 }

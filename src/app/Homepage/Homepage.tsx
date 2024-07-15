@@ -1,15 +1,41 @@
+import Image from "next/image";
 import React from "react";
 
 const HomePage = () => {
   return (
-    <section className="home-wrap w-full h-[100vh] flex flex-col justify-start items-center">
+    <section className="home-wrap w-full h-[100vh] flex flex-col justify-start items-center relative bg-[#0C1B3D]">
+      {/* Office man image(outside document flow) */}
+      <section className="absolute top-0 left-0 w-full h-full flex flex-col justify-start items-center overflow-x-hidden">
+        <figure className="w-full h-[60vh] relative mt-[140px]">
+          <Image
+            src={"/assets/images/Home_center.png"}
+            alt={"Homepage center image"}
+            fill
+          />
+        </figure>
+
+        <section className="mt-[30px] flex justify-between items-center w-[95%]">
+          <section className="px-[1px] flex items-center justify-start w-[70%] h-[20px] relative bg-[#004672] border-[2px] border-[#FF463D] rounded-[50px]">
+            <figure className="w-full h-full absolute">
+              <img
+              className="w-full h-full"
+                src={"/assets/images/Stripe_bg.png"}
+                alt={"Homepage center image"}
+              />
+            </figure>
+
+            <div className="z-[1] w-[50%] h-[90%] progress-fill"></div>
+          </section>
+        </section>
+      </section>
+
       {/* Token icon and mine value */}
 
       <section className="mt-[40px] flex justify-center items-center">
         <figure className="w-[30px] h-[30px] mr-[10px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-             className="w-full h-full"
+            className="w-full h-full"
             viewBox="0 0 31 30"
             fill="none"
           >
@@ -60,7 +86,9 @@ const HomePage = () => {
           </svg>
         </figure>
 
-        <span className="font-bold text-white text-[20px] font-1">530,864,388</span>
+        <span className="font-bold text-white text-[20px] font-1">
+          530,864,388
+        </span>
       </section>
     </section>
   );

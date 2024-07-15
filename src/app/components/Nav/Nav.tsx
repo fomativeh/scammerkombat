@@ -22,7 +22,7 @@ const Nav = ({ currentPage, setCurrentPage }: NavProps) => {
                 key={i}
                 className="flex flex-col justify-start items-center"
               >
-                <figure className="relative w-[20px] h-[15px] mb-[10px]">
+                <figure className="relative w-[25px] h-[25px] mb-[5px]">
                   <Image
                     src={`/assets/icons/${eachIcon}-${
                       currentPage == eachIcon ? `active` : `inactive`
@@ -53,7 +53,7 @@ const Nav = ({ currentPage, setCurrentPage }: NavProps) => {
                 key={i}
                 className="flex flex-col justify-start items-center"
               >
-                <figure className="relative w-[20px] h-[15px] mb-[10px]">
+                <figure className="relative w-[25px] h-[25px] mb-[5px]">
                   <Image
                     src={`/assets/icons/${eachIcon}-${
                       currentPage == eachIcon ? `active` : `inactive`
