@@ -3,33 +3,47 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 const Homepage = () => {
-    const [mineValue, setMineValue] = useState<number>(129)
-    const [tapFeedback, setTapFeedback] = useState<{ show: boolean, top: number }>({ show: false, top: 0 });
+  const [mineValue, setMineValue] = useState<number>(129);
+  const [tapFeedback, setTapFeedback] = useState<{
+    show: boolean;
+    top: number;
+  }>({ show: false, top: 0 });
 
-    const handleTap = () => {
-      setMineValue(mineValue + 1);
-      const tapPosition = document.getElementById("tap-image");
-      if (tapPosition) {
-        const topOffset = tapPosition.getBoundingClientRect().top;
-        setTapFeedback({ show: true, top: topOffset });
-        setTimeout(() => setTapFeedback({ show: false, top: 0 }), 1500); // Hide feedback after 1.5 seconds
-      }
-    };
-  
+  const handleTap = () => {
+    setMineValue(mineValue + 1);
+    const tapPosition = document.getElementById("tap-image");
+    if (tapPosition) {
+      const topOffset = tapPosition.getBoundingClientRect().top;
+      setTapFeedback({ show: true, top: topOffset });
+      setTimeout(() => setTapFeedback({ show: false, top: 0 }), 1500); // Hide feedback after 1.5 seconds
+    }
+  };
+
   return (
     <main className="home-wrap w-full h-[100vh] flex flex-col justify-start items-center relative">
       {/*Tap image */}
       <section className="absolute top-0 left-0 w-full h-full flex flex-col justify-end items-center overflow-x-hidden">
-        <figure className="w-[60vw] h-[60vw] relative tap-image" onClick={handleTap}>
-          <Image src={"/assets/images/Tap_image.png"} alt={"Tap image"} fill />
-        </figure>
+        <section className="w-full h-full absolute top-0 left-0 flex justify-center items-center">
+          <figure
+            className="w-[80vw] h-[80vw] relative tap-image"
+            onClick={handleTap}
+          >
+            <Image
+              src={"/assets/images/Tap_image.png"}
+              alt={"Tap image"}
+              fill
+            />
+          </figure>
+        </section>
 
         {tapFeedback.show && (
           <section
             className="absolute top-[calc(50px + 10vh + 5%)] left-[calc(50vw - 20px)] text-white"
             style={{ top: tapFeedback.top }}
           >
-            <span className="block bg-black bg-opacity-50 px-2 py-1 rounded-md">+1</span>
+            <span className="block bg-black bg-opacity-50 px-2 py-1 rounded-md">
+              +1
+            </span>
           </section>
         )}
 
@@ -100,8 +114,8 @@ const Homepage = () => {
 
       {/* Token icon and mine value */}
 
-      <section className="mt-[40px] flex justify-center items-center">
-        <figure className="w-[30px] h-[30px] mr-[10px]">
+      <section className="mt-[50px] flex justify-center items-center">
+        <figure className="w-[40px] h-[40px] mr-[10px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-full h-full"
@@ -155,7 +169,7 @@ const Homepage = () => {
           </svg>
         </figure>
 
-        <span className="font-bold text-white text-[20px] font-1">
+        <span className="font-bold text-white text-[30px] font-1">
           {formatNumberWithCommas(mineValue)}
         </span>
       </section>

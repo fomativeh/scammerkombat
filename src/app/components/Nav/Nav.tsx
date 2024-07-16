@@ -50,7 +50,7 @@ const Nav = ({ currentPage, setCurrentPage}: NavProps) => {
         <section className="w-[30%] relative flex justify-center h-full">
           <figure
             className={`absolute mt-[-25%] ${
-              currentPage == "Wallet" ? `bg-white` : `bg-[#9E86FF]`
+              currentPage == "Wallet" ? `bg-[#9E86FF]` : `bg-white`
             } w-[50px] h-[50px] rounded-[50px] flex justify-center items-center`}
             onClick={() => setCurrentPage("Wallet")}
           >
@@ -74,7 +74,7 @@ const Nav = ({ currentPage, setCurrentPage}: NavProps) => {
                 <figure className="relative w-[25px] h-[25px] mb-[5px]">
                   <Image
                     src={`/assets/icons/${eachIcon}-${
-                      currentPage == eachIcon ? `active` : `inactive`
+                      currentPage == eachIcon ? `inactive` : `active`
                     }.svg`}
                     alt={"Nav icon"}
                     fill
