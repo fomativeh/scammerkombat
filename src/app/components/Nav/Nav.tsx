@@ -13,7 +13,7 @@ const Nav = ({ currentPage, setCurrentPage}: NavProps) => {
   const navIconsRight = ["Earn", "Activity"];
   return (
     <section className="z-[9] flex justify-center items-center w-full fixed bottom-[10px] left-0">
-      <nav className="w-[95%] opaque-bg rounded-[30px] px-[10px] h-[70px] flex justify-between items-center">
+      <nav className={`w-[95%] ${currentPage=="Invite"?`bg-[#0c1b3d]`:`bg-[#1d142fc8]`} rounded-[30px] px-[10px] h-[70px] flex justify-between items-center`}>
         {/* Nav buttons (mid to left) */}
         <section className="flex w-[35%] justify-between items-center">
           {navIconsLeft.map((eachIcon, i) => {

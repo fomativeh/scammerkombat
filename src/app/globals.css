@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,33 +14,54 @@
   background-size: cover;
 } */
 
-.font-1{
+.font-1 {
   font-family: "Space Grotesk";
 }
 
-.font-2{
+.font-2 {
   font-family: "Poppins";
 }
 
-.font-3{
+.font-3 {
   font-family: "Rubik";
 }
 
-.progress-fill{
+.font-3 {
+  font-family: "Inter";
+}
+
+.progress-fill {
   background: linear-gradient(to left, #ff9c00 0%, #ff9c00 84%, #ff463d 100%);
   border: 1px solid white;
   border-radius: 50px;
 }
 
-body{
-  background-color:#0C1B3D
+body {
+  background-color: #0c1b3d;
 }
 
-.opaque-bg{
+.opaque-bg {
   background-color: #1d142fc8;
 }
 
-.invite-banner{
+.invite-banner {
   border-radius: 8px;
-background: rgba(151, 151, 151, 0.17);
+  background: rgba(151, 151, 151, 0.17);
+}
+
+.invite-gradient-bg {
+  border-radius: 29px;
+  background: linear-gradient(
+    107deg,
+    #ffdd57 20.24%,
+    #dcf98c 43.08%,
+    #ccbeeb 62.32%,
+    #854bfe 80.48%,
+    #4e58ed 88.9%
+  );
+}
+
+.invitee {
+  border-radius: 8px;
+  background: rgba(151, 151, 151, 0.17);
 }
