@@ -26,7 +26,7 @@ const Nav = ({ currentPage, setCurrentPage}: NavProps) => {
                 <figure className="relative w-[25px] h-[25px] mb-[5px]">
                   <Image
                     src={`/assets/icons/${eachIcon}-${
-                      currentPage == eachIcon ? `active` : `inactive`
+                      currentPage == eachIcon ? `inactive` : `active`
                     }.svg`}
                     alt={"Nav icon"}
                     fill
@@ -36,7 +36,7 @@ const Nav = ({ currentPage, setCurrentPage}: NavProps) => {
                   className={`
                     font-2 text-[12px]
                     ${
-                      currentPage == eachIcon ? `text-white` : `text-[#9E86FF]`
+                      currentPage == eachIcon ? `text-[#9E86FF]` : `text-white`
                     }`}
                 >
                   {eachIcon}
