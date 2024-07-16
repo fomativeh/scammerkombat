@@ -6,7 +6,7 @@ const HomePage = () => {
     <section className="home-wrap w-full h-[100vh] flex flex-col justify-start items-center relative bg-[#0C1B3D]">
       {/* Office man image(outside document flow) */}
       <section className="absolute top-0 left-0 w-full h-full flex flex-col justify-start items-center overflow-x-hidden">
-        <figure className="w-full h-[45vh] relative mt-[140px]">
+        <figure className="w-full h-[50vh] relative mt-[140px]">
           <Image
             src={"/assets/images/Home_center.png"}
             alt={"Homepage center image"}
@@ -70,7 +70,7 @@ const HomePage = () => {
 
             <section className="flex flex-col items-start font-1 font-bold">
               <span className="text-white text-[13px]">4000</span>
-              <section className="flex items-center text-white opacity-[80%] text-[10px]">
+              <section className="flex items-center text-white opacity-[80%] text-[11px]">
                 <span>/</span>
                 <span className="mt-[2px]">
                   5000
