@@ -84,7 +84,7 @@ const Nav = ({ currentPage, setCurrentPage}: NavProps) => {
                   className={`
                     font-2 text-[12px]
                     ${
-                      currentPage == eachIcon ? `text-white` : `text-[#9E86FF]`
+                      currentPage == eachIcon ? `text-[#9E86FF]` : `text-white`
                     }`}
                 >
                   {eachIcon}
