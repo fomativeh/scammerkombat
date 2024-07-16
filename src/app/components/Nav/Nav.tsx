@@ -13,7 +13,7 @@ const Nav = ({ currentPage, setCurrentPage }: NavProps) => {
 
   return (
     <section className="z-[9] flex justify-center items-center w-full fixed bottom-[10px] left-0">
-      <nav className="w-[95%] bg-[#1D142F] opacity-[74%] rounded-[30px] px-[10px] py-[15px] flex justify-between items-center">
+      <nav className="w-[95%] bg-[#1D142F] opacity-[74%] rounded-[30px] px-[10px] py-[15px] h-[70px] flex justify-between items-center">
         <section className="flex w-[35%] justify-between items-center">
           {navIconsLeft.map((eachIcon, i) => {
             return (
@@ -35,14 +35,20 @@ const Nav = ({ currentPage, setCurrentPage }: NavProps) => {
                   className={`
                     font-2 text-[12px]
                     ${
-                    currentPage == eachIcon ? `text-white` : `text-[#9E86FF]`
-                  }`}
+                      currentPage == eachIcon ? `text-white` : `text-[#9E86FF]`
+                    }`}
                 >
                   {eachIcon}
                 </span>
               </section>
             );
           })}
+        </section>
+
+        <section className="w-[30%] relative flex justify-center h-full">
+          <figure className="absolute mt-[-50%] bg-[#9E86FF] w-[50px] h-[50px] rounded-[50px] flex justify-center items-center">
+            <img src={`/assets/icons/wallet.png`} alt={"Wallet icon"} />
+          </figure>
         </section>
 
         <section className="flex w-[35%] justify-between items-center">
@@ -66,8 +72,8 @@ const Nav = ({ currentPage, setCurrentPage }: NavProps) => {
                   className={`
                     font-2 text-[12px]
                     ${
-                    currentPage == eachIcon ? `text-white` : `text-[#9E86FF]`
-                  }`}
+                      currentPage == eachIcon ? `text-white` : `text-[#9E86FF]`
+                    }`}
                 >
                   {eachIcon}
                 </span>
