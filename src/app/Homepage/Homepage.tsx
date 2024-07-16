@@ -1,17 +1,13 @@
 import Image from "next/image";
 import React from "react";
 
-const HomePage = () => {
+const Homepage = () => {
   return (
-    <section className="home-wrap w-full h-[100vh] flex flex-col justify-start items-center relative">
+    <main className="home-wrap w-full h-[100vh] flex flex-col justify-start items-center relative">
       {/*Tap image */}
       <section className="absolute top-0 left-0 w-full h-full flex flex-col justify-end items-center overflow-x-hidden">
         <figure className="w-[60vw] h-[60vw] relative">
-          <Image
-            src={"/assets/images/Tap_image.png"}
-            alt={"Tap image"}
-            fill
-          />
+          <Image src={"/assets/images/Tap_image.png"} alt={"Tap image"} fill />
         </figure>
 
         <section className="mt-[30px] flex justify-start items-center w-[95%] mb-[130px]">
@@ -72,9 +68,7 @@ const HomePage = () => {
               <span className="text-white text-[13px]">4000</span>
               <section className="flex items-center text-white opacity-[80%] text-[11px]">
                 <span>/</span>
-                <span className="mt-[2px]">
-                  5000
-                </span>
+                <span className="mt-[2px]">5000</span>
               </section>
             </section>
           </section>
@@ -142,8 +136,8 @@ const HomePage = () => {
           530,864,388
         </span>
       </section>
-    </section>
+    </main>
   );
 };
 
-export default HomePage;
+export default Homepage;

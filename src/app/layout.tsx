@@ -5,11 +5,13 @@ import Script from "next/script";
 import { SDKProvider } from "@tma.js/sdk-react";
 import dynamic from "next/dynamic";
 
+
 const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
+
   return (
     <html lang="en">
       <head>
@@ -25,7 +27,9 @@ const RootLayout = ({
         />
       </head>
       <SDKProvider>
-        <body>{children}</body>
+        <body>
+          {children}
+        </body>
       </SDKProvider>
     </html>
   );

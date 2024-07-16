@@ -1,7 +1,7 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 
-const ConnectWallet = () => {
+const ConnectWallet = ({ setCurrentPage }: { setCurrentPage:Dispatch<SetStateAction<string>> }) => {
   const [activeWalletProvider, setActiveWalletProvider] =
     useState<String>("TON Wallet");
   const walletProviders = [
@@ -10,9 +10,9 @@ const ConnectWallet = () => {
     { icon: "metamask", title: "Metamask" },
   ];
   return (
-    <section className="w-full min-h-[100vh] flex flex-col justify-start items-center overflow-y-auto ">
+    <main className="w-full min-h-[100vh] flex flex-col justify-start items-center overflow-y-auto ">
       <section className="mt-[30px] flex items-center">
-        <div className="w-[26px] h-[26px] bg-white rounded-[50px] flex justify-center items-center mr-[15px]">
+        <div onClick={()=>setCurrentPage("Upgrades")} className="w-[26px] h-[26px] bg-white rounded-[50px] flex justify-center items-center mr-[15px]">
           <figure className="w-[30%] h-[30%] relative">
             <Image
               src={"/assets/icons/left-angle.svg"}
@@ -35,7 +35,7 @@ const ConnectWallet = () => {
         />
       </figure>
 
-        <section className="font-2 w-[90vw] flex flex-col justify-start items-center opaque-bg rounded-[32px] py-[10px] px-[15px] mb-[200px]">
+      <section className="font-2 w-[90vw] flex flex-col justify-start items-center opaque-bg rounded-[32px] py-[10px] px-[15px] mb-[200px]">
         <h1 className="font-[500] text-white text-[18px]">
           Choose your wallet
         </h1>
@@ -56,8 +56,12 @@ const ConnectWallet = () => {
           {walletProviders.map((each, i) => {
             return (
               <section
-              onClick={()=>setActiveWalletProvider(each.title)}
-                className={`${i>0 && `mt-[10px]`} ${i==2 && `mb-[20px]`} rounded-[16px] w-full flex justify-between items-center p-[15px] ${each.title==activeWalletProvider?`bg-white`:`opaque-bg`}`}
+                onClick={() => setActiveWalletProvider(each.title)}
+                className={`${i > 0 && `mt-[10px]`} ${
+                  i == 2 && `mb-[20px]`
+                } rounded-[16px] w-full flex justify-between items-center p-[15px] ${
+                  each.title == activeWalletProvider ? `bg-white` : `opaque-bg`
+                }`}
                 key={i}
               >
                 <section className="flex items-center">
@@ -68,25 +72,34 @@ const ConnectWallet = () => {
                       fill
                     />
                   </figure>
-                  <span className={`font-2 font-[600] ${each.title==activeWalletProvider?`text-black`:`text-white`}`}>{each.title}</span>
+                  <span
+                    className={`font-2 font-[600] ${
+                      each.title == activeWalletProvider
+                        ? `text-black`
+                        : `text-white`
+                    }`}
+                  >
+                    {each.title}
+                  </span>
                 </section>
 
-
                 <figure className="w-[10px] h-[10px] relative">
-                    <Image
-                      src={`/assets/icons/${each.title==activeWalletProvider?`right-angle`:`right-angle-white`}.svg`}
-                      alt={"Wallet Center image"}
-                      fill
-                    />
-                  </figure>
+                  <Image
+                    src={`/assets/icons/${
+                      each.title == activeWalletProvider
+                        ? `right-angle`
+                        : `right-angle-white`
+                    }.svg`}
+                    alt={"Wallet Center image"}
+                    fill
+                  />
+                </figure>
               </section>
             );
           })}
-
-          
         </section>
       </section>
-    </section>
+    </main>
   );
 };
 
