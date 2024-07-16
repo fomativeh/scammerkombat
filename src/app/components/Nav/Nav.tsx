@@ -47,7 +47,7 @@ const Nav = ({ currentPage, setCurrentPage }: NavProps) => {
 
         <section className="w-[30%] relative flex justify-center h-full">
           <figure className="absolute mt-[-25%] bg-[#9E86FF] w-[50px] h-[50px] rounded-[50px] flex justify-center items-center">
-            <img src={`/assets/icons/wallet.png`} alt={"Wallet icon"} />
+            <img src={`/assets/icons/wallet.svg`} alt={"Wallet icon"} />
           </figure>
         </section>
 

@@ -6,7 +6,7 @@ const HomePage = () => {
     <section className="home-wrap w-full h-[100vh] flex flex-col justify-start items-center relative bg-[#0C1B3D]">
       {/* Office man image(outside document flow) */}
       <section className="absolute top-0 left-0 w-full h-full flex flex-col justify-start items-center overflow-x-hidden">
-        <figure className="w-full h-[50vh] relative mt-[140px]">
+        <figure className="w-full h-[55vh] relative mt-[140px]">
           <Image
             src={"/assets/images/Home_center.png"}
             alt={"Homepage center image"}
