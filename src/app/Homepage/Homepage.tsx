@@ -3,10 +3,10 @@ import React from "react";
 
 const HomePage = () => {
   return (
-    <section className="home-wrap w-full h-[100vh] flex flex-col justify-start items-center relative bg-[#0C1B3D]">
+    <section className="home-wrap w-full h-[100vh] flex flex-col justify-start items-center relative">
       {/* Office man image(outside document flow) */}
-      <section className="absolute top-0 left-0 w-full h-full flex flex-col justify-start items-center overflow-x-hidden">
-        <figure className="w-full h-[55vh] relative mt-[140px]">
+      <section className="absolute top-0 left-0 w-full h-full flex flex-col justify-end items-center overflow-x-hidden">
+        <figure className="w-full h-[40vh] relative">
           <Image
             src={"/assets/images/Home_center.png"}
             alt={"Homepage center image"}
@@ -14,7 +14,7 @@ const HomePage = () => {
           />
         </figure>
 
-        <section className="mt-[30px] flex justify-start items-center w-[95%]">
+        <section className="mt-[30px] flex justify-start items-center w-[95%] mb-[130px]">
           {/* Progress bar */}
           <section className="mr-[10px] px-[1px] flex items-center justify-start w-[70%] h-[20px] relative bg-[#004672] border-[2px] border-[#FF463D] rounded-[50px]">
             <figure className="w-full h-full absolute">

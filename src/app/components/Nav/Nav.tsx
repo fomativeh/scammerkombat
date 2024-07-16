@@ -10,10 +10,9 @@ type NavProps = {
 const Nav = ({ currentPage, setCurrentPage }: NavProps) => {
   const navIconsLeft = ["Upgrades", "Invite"];
   const navIconsRight = ["Earn", "Activity"];
-
   return (
     <section className="z-[9] flex justify-center items-center w-full fixed bottom-[10px] left-0">
-      <nav className="w-[95%] bg-[#1D142F] opacity-[74%] rounded-[30px] px-[10px] h-[70px] flex justify-between items-center">
+      <nav className="w-[95%] opaque-bg rounded-[30px] px-[10px] h-[70px] flex justify-between items-center">
         <section className="flex w-[35%] justify-between items-center">
           {navIconsLeft.map((eachIcon, i) => {
             return (
@@ -46,7 +45,7 @@ const Nav = ({ currentPage, setCurrentPage }: NavProps) => {
         </section>
 
         <section className="w-[30%] relative flex justify-center h-full">
-          <figure className="absolute mt-[-25%] bg-[#9E86FF] w-[50px] h-[50px] rounded-[50px] flex justify-center items-center">
+          <figure className={`absolute mt-[-25%] ${currentPage=="Wallet"? `bg-white`:`bg-[#9E86FF]`} w-[50px] h-[50px] rounded-[50px] flex justify-center items-center`} onClick={()=>setCurrentPage("Wallet")}>
             <img src={`/assets/icons/wallet.svg`} alt={"Wallet icon"} />
           </figure>
         </section>

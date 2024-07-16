@@ -27,3 +27,11 @@
   border: 1px solid white;
   border-radius: 50px;
 }
+
+body{
+  background-color:#0C1B3D
+}
+
+.opaque-bg{
+  background-color: #1d142fc8;
+}
