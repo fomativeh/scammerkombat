@@ -8,7 +8,7 @@ import ConnectWallet from "./ConnectWallet/ConnectWallet";
 import Invite from "./Invite/Invite";
 
 export default function Home() {
-  const [currentPage, setCurrentPage] = useState<string>("Upgrades");
+  const [currentPage, setCurrentPage] = useState<string>("Invite");
 
   return (
     <main className="w-full min-h-[100vh]">
