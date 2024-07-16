@@ -7,6 +7,8 @@ import Homepage from "./Homepage/Homepage";
 import ConnectWallet from "./ConnectWallet/ConnectWallet";
 import Invite from "./Invite/Invite";
 import { useViewport } from "@tma.js/sdk-react";
+import Earn from "./Earn/Earn";
+import Activity from "./Activity/Activity";
 
 export default function Home() {
     const vp = useViewport();
@@ -26,6 +28,8 @@ export default function Home() {
       )}
 
       {currentPage == "Invite" && <Invite setCurrentPage={setCurrentPage} />}
+      {currentPage =="Earn" && <Earn/>}
+      {currentPage=="Activity" && <Activity/>}
 
       <Nav currentPage={currentPage} setCurrentPage={setCurrentPage} />
     </main>
