@@ -7,12 +7,12 @@ const ConnectWallet = () => {
   const walletProviders = [
     { icon: "ton", title: "TON Wallet" },
     { icon: "coinbase", title: "Coinbase" },
-    { icon: "Metamask", title: "Metamask" },
+    { icon: "metamask", title: "Metamask" },
   ];
   return (
     <section className="w-full min-h-[100vh] flex flex-col justify-start items-center overflow-y-auto ">
       <section className="mt-[30px] flex items-center">
-        <div className="w-[26px] h-[26px] bg-white rounded-[50px] flex justify-center items-center mr-[10px]">
+        <div className="w-[26px] h-[26px] bg-white rounded-[50px] flex justify-center items-center mr-[15px]">
           <figure className="w-[30%] h-[30%] relative">
             <Image
               src={"/assets/icons/left-angle.svg"}
